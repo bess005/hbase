@@ -36,7 +36,7 @@ jobs:
           sudo apt-get -y install openjdk-8-jdk
           sudo apt-get -y install maven
           mkdir staging
-          mvn clean package -DskipTests -Dhadoop.profile=3.0 -Dhadoop-three.version=3.3.1
+          mvn clean package -DskipTests assembly:single -Dhadoop.profile=3.0 -Dhadoop-three.version=3.3.1
           mkdir staging && cp /home/runner/work/hbase/hbase/hbase-assembly/target/*.tar.gz staging
       - name: upload-artifact
         uses: actions/upload-artifact@v3
