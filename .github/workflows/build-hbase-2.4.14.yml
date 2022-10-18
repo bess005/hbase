@@ -1,7 +1,7 @@
 name: hbase-build-workflow
 on: 
   push:
-    branches: [ bess-Action/2.4.14 ]
+    branches: [ master ]
 jobs:
   build-hbase:
     runs-on: ubuntu-20.04
